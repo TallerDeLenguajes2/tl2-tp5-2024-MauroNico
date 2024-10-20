@@ -1,5 +1,5 @@
 namespace Tienda.Models{
-        public class Productos
+        public class Producto
     {
         public int idProducto { get; set; }
         public string Descripcion { get; set; }
