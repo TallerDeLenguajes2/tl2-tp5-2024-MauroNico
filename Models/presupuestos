@@ -1,0 +1,26 @@
+namespace Tienda.Models{
+    public class Presupuesto{
+        private int iDPresupuestos;
+        private string nombreDestinatario;
+        private List<PresupuestoDetalle> detalle;
+
+        public Presupuesto(){
+            detalle = new List<PresupuestoDetalle>();
+        }
+
+        public int IDPresupuestos { get => iDPresupuestos; set => iDPresupuestos = value; }
+        public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
+        public List<PresupuestoDetalle> Detalle { get => detalle; set => detalle = value; }
+        puvlic void AgregarProducto(Producto prod, int Cant){
+            PresupuestoDetalle pd =new PresupuestoDetalle();
+            pd.Producto=prod;
+            pd.Cantidad=Cant;
+            detalle.Add(prod);
+        }
+
+        public int MontoPresupuesto();
+        public int MontoPrespestoConIva();
+        public int CantidadProductos();
+
+    }
+}
